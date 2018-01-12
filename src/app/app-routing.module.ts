@@ -6,9 +6,9 @@ import { HoneComponent } from './project-one/home.component';
 import { NotFoundComponent } from './project-one/not-found.component'
 
 const appRoutes: Routes = [
-  { path: '', component: HoneComponent },
+  { path: '',         component: HoneComponent },
   { path: 'contact',  component: ContactComponent },
-  { path: '**',  component: NotFoundComponent }
+  { path: '**',       component: NotFoundComponent }
 ];
 
 @NgModule({
