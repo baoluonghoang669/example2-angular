@@ -6,6 +6,7 @@ import { MainComponent } from './project-one/main.component';
 import { ContactComponent } from './project-one/contact.component';
 import { HoneComponent } from './project-one/home.component';
 import { NotFoundComponent } from './project-one/not-found.component';
+import { AboutComponent } from './project-one/about.component';
 import { AppRoutingModule }     from './app-routing.module';
 
 
@@ -15,7 +16,8 @@ import { AppRoutingModule }     from './app-routing.module';
     MainComponent,
     ContactComponent,
     HoneComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
