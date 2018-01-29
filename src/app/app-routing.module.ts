@@ -10,6 +10,7 @@ const appRoutes: Routes = [
   { path: '',         component: HoneComponent },
   { path: 'contact',  component: ContactComponent },
   { path: 'about',    component: AboutComponent },
+  { path: 'about/web',    component: AboutComponent },
   { path: '**',       component: NotFoundComponent }
 ];
 
