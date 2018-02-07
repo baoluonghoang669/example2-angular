@@ -46,7 +46,8 @@ export class CourseListComponent implements OnInit {
 
 	ngOnInit() {
 		this.courses = this._courseService.getCourses();
-	}
+  }
+
 	onSelect(courseID: string){
 		this._routerService.navigate(['/course', courseID]);
 	}
