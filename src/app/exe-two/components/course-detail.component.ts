@@ -32,7 +32,6 @@ export class CourseDetailComponent implements OnInit {
       private _routerService: Router,
       private _activatedRoutedService: ActivatedRoute
 	) {
-
 	}
 
 	goCourseList(){
