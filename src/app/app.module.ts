@@ -9,6 +9,7 @@ import { AboutComponent } from './project-one/about.component';
 import { AppRoutingModule }     from './app-routing.module';
 import { CourseListComponent } from './exe-two/components/course-list.component';
 import { CourseService } from './exe-two/services/course.service';
+import { CourseDetailComponent } from './exe-two/components/course-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CourseService } from './exe-two/services/course.service';
     HoneComponent,
     NotFoundComponent,
     AboutComponent,
-    CourseListComponent
+    CourseListComponent,
+    CourseDetailComponent
   ],
   imports: [
     BrowserModule,

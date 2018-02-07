@@ -25,7 +25,7 @@ import { ICourse } from './../defines/course.interface';
 						<tr *ngFor="let course of courses; let i = index">
 							<td>{{ i+1 }}</td>
 							<td>{{ course.name }}</td>
-							<td><span (click)="onSelect(course.id)" class="label label-success">View</span></td>
+							<td><a (click)="onSelect(course.id)" class="label label-success">View</a></td>
 						</tr>
 					</tbody>
 				</table>
@@ -48,7 +48,7 @@ export class CourseListComponent implements OnInit {
 		this.courses = this._courseService.getCourses();
   }
 
-	onSelect(courseID: string){
-		this._routerService.navigate(['/course', courseID]);
+	onSelect(courseID: ICourse){
+    this._routerService.navigate(['/course', courseID]);
 	}
 }
