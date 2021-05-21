@@ -1,31 +1,35 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RouterModule, Routes } from '@angular/router';
-import { ContactComponent } from './project-one/contact.component';
-import { HoneComponent } from './project-one/home.component';
-import { NotFoundComponent } from './project-one/not-found.component';
-import { AboutComponent } from './project-one/about.component';
-import { AppRoutingModule }     from './app-routing.module';
-import { CourseListComponent } from './exe-two/components/course-list.component';
-import { CourseService } from './exe-two/services/course.service';
-import { CourseDetailComponent } from './exe-two/components/course-detail.component';
+import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
+import { CockpitComponent } from './cockpit/cockpit.component';
+import { EvenComponent } from './even/even.component';
+import { GameControlComponent } from './game-control/game-control.component';
+import { OddComponent } from './odd/odd.component';
+import { ServerElementComponent } from './server-element/server-element.component';
+import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
+import { UnlessDirective } from './unless.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactComponent,
-    HoneComponent,
-    NotFoundComponent,
-    AboutComponent,
-    CourseListComponent,
-    CourseDetailComponent
+    CockpitComponent,
+    ServerElementComponent,
+    OddComponent,
+    EvenComponent,
+    GameControlComponent,
+    BasicHighlightDirective,
+    BetterHighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [CourseService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 

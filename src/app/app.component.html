@@ -1,45 +1,38 @@
-<!-- <div class="container warpper-container">
-  <div class="panel panel-info">
-    <div class="panel-heading">
-      Header
+<div class="container">
+    <app-cockpit (serverCreated)="onServerAdded($event)" (blueprintCreated)="onBlueprintAdded($event)"></app-cockpit>
+    <hr>
+    <div class="row">
+        <div class="col-xs-12">
+            <button class="btn btn-primary" (click)="onChangeFirst()">Change first element</button>
+            <button class="btn btn-danger" (click)="onDestroyFirst()">Destroy first element</button>
+            <app-server-element *ngFor="let element of serverElements" [srvElement]="element" [name]="element.name">
+                <div #contentParagraph>
+                    <ng-template [ngIf]="element.type === 'server'">
+                        <strong style="color: red">{{element.content}}</strong>
+                    </ng-template>
+                    <!-- <div *appUnless="element.type === 'server'">
+                        <strong style="color: red">{{element.content}}</strong>
+                    </div> -->
+                    <em *ngIf="element.type === 'blueprint'">{{element.content}}</em>
+                </div>
+            </app-server-element>
+        </div>
     </div>
-    <div class="panel-body">
-      <router-outlet></router-outlet>
-    </div>
-    <div class="panel-footer">
-      <a class="link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-      <a class="link" routerLink="/about" routerLinkActive="active menu" [routerLinkActiveOptions]="{exact: true}">About</a>
-      <a class="link" routerLink="/about/web" routerLinkActive="active menu" >About Web</a>
-      <a class="link" routerLink="/contact" routerLinkActive="active menu">Contact</a>
-    </div>
-  </div>
 </div>
--->
-<!-- EXE TWO : START-->
-<div class="container warpper-container">
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" [routerLink]="['/home']">Exe Two</a>
-      </div>
-
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav">
-          <li routerLinkActive="active"><a [routerLink]="['/courses']">Course List</a></li>
-          <li routerLinkActive="active"><a [routerLink]="['/course', 'C01']">Course C01</a></li>
-          <li routerLinkActive="active"><a [routerLink]="['/course', 'C02']">Course C02</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <router-outlet></router-outlet>
-
+<hr>
+<p appBasicHighlight>Style me with basic directive!</p>
+<p [appBetterHighlight]="'red'" defaultColor="yellow">Style me with better directive!</p>
+<label>Demo ngSwitch</label>
+<div [ngSwitch]="value">
+    <p *ngSwitchCase="5">5</p>
+    <p *ngSwitchCase="10">10</p>
+    <p *ngSwitchCase="100">100</p>
+    <p *ngSwitchDefault>Default</p>
 </div>
-
+<div class="container">
+    <h1>Game</h1>
+    <app-game-control (intervalFired)="startGame($event)"></app-game-control>
+    <br>
+    <app-odd *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-odd>
+    <app-even *ngFor="let evenNumber of evenNumbers" [number]="evenNumber"></app-even>
+</div>
